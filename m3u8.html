@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="box">
+    m3u8
+    http://cache.m.iqiyi.com/dc/dt/mobile/20160303/fb/0a/bc183e7aee8d65f101d28396a6a7add4.m3u8?qypid=453787200_25&qd_src=5be6a2fdfe4f4a1a8c7b08ee46a18887&qd_tm=1491473174000&qd_ip=111.201.87.146&qd_sc=eeaec45104c0c4c19f5665b23d49e58c&mbd=205261133c1b2239a73bf63790d117af_3.2.2_1
+    mp4
+    http://cn-hbcd-cu-v-01.acgvideo.com/vg3/6/69/17695852-1-hd.mp4?expires=1495603200&platform=pc&ssig=BDmrgfTJ47Q7F-v2uA-_lg&oi=2093755106&nfa=iCnd1wqqoAsXLyv+e2tfVA==&dynamic=1&hfa=2065157611
+    flv:
+    http://cn-bjsj-cc-v-02.acgvideo.com/vg3/a/aa/17695852-1.flv?expires=1495603200&platform=pc&ssig=uZMmptj1qPTg7ugchBnTvw&oi=2093755106&nfa=iCnd1wqqoAsXLyv+e2tfVA==&dynamic=1&hfa=2065157610
+    <!-- 支持m3u8格式的插件-->
+    <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
+    <video id="video" controls></video>
+    <script>
+        if(Hls.isSupported()) {
+            var video = document.getElementById('video');
+            var hls = new Hls();
+//            hls.loadSource('http://cache.m.iqiyi.com/dc/dt/mobile/20160303/fb/0a/bc183e7aee8d65f101d28396a6a7add4.m3u8?qypid=453787200_25&qd_src=5be6a2fdfe4f4a1a8c7b08ee46a18887&qd_tm=1491473174000&qd_ip=111.201.87.146&qd_sc=eeaec45104c0c4c19f5665b23d49e58c&mbd=205261133c1b2239a73bf63790d117af_3.2.2_1');
+//            hls.loadSource('http://pl-ali.youku.com/playlist/m3u8?did=1&ts=1&ctype=12&token=&keyframe=0&sid=1&ev=1&type=flv&oip=1&vid=XMjkxMjQ1OTIw');
+            //hls.loadSource('http://cache.m.iqiyi.com/dc/dt/mobile/20141209/cc/ee/9ca3930922641da2bd6f31396f8fd8b8.m3u8?qypid=332500400_25&qd_src=5be6a2fdfe4f4a1a8c7b08ee46a18887&qd_tm=1496198633000&qd_ip=124.204.42.225&qd_sc=2deafe738557b502d1768e83c342d5da&mbd=205261133c1b2239a73bf63790d117af_3.2.2_1');
+            hls.loadSource('http://defaultts.tc.qq.com/defaultts.tc.qq.com/9OasfRkm_tS-qT4L5WLVgM6zOTm5-irsqHyVJfslODOzk09sxSSAOhWec0O_ruiVOlr4wMLUKpGQTzQzms1nFG_EPNMVpQ_pWE-aOOMchGQg_QOZc17c_CvN5fNS108ptXXPc845kHNM3Y3V81Vq_A/v0023a49lsb.321003.ts.m3u8?ver=4');
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                video.play();
+            });
+        }
+    </script>
+</div>
+
+</body>
+</html>
